@@ -4,13 +4,14 @@ const port = 3000;
 const methodRoutes = require('./routes/methodRoutes');
 const goalRoutes = require('./routes/goalRoutes');
 
+
 app.use(express.json());
 app.use(methodRoutes);
-//app.use(goalRoutes);
+app.use(goalRoutes);
 
 
 app.get('/', (req, res) => {
-    res.send('Hello World! Ready to start?')
+    res.send("Studybuddy working")
 })
 
 

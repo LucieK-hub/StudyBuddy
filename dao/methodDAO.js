@@ -10,7 +10,7 @@ const methodsDataPath = path.join(__dirname, '../data/methods.json');
 //function to read methods form the json file
 const readMethodsFromData = () => {
     try {
-        const data = fs.readFileSync(methodsDataPath, 'utf8');
+        const data = fs.readFileSync(methodsDataPath, 'utf8'); //read the file as a string
         return JSON.parse(data);
     } catch (error) {
         console.log('Error reading methods from data', error);

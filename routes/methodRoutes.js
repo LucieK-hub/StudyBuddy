@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const methodController = require('../controllers/methodController');
+const { listMethods } = require('../controllers/methodController');
 
 
-router.get("/methods", methodController.listMethods);
+router.get("/methods", listMethods);
 
 
 module.exports = router;
