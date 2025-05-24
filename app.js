@@ -3,11 +3,13 @@ const app = express();
 const port = 3000;
 const methodRoutes = require('./routes/methodRoutes');
 const goalRoutes = require('./routes/goalRoutes');
+const timerRoutes = require('./routes/timerRoutes');
 
 
 app.use(express.json());
 app.use(methodRoutes);
 app.use(goalRoutes);
+app.use(timerRoutes);
 
 
 app.get('/', (req, res) => {
